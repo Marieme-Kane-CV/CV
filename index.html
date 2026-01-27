@@ -4,26 +4,28 @@
   <meta charset="utf-8">
   <title>Mon CV</title>
   <style>
-    body {
+    /* Supprime les marges et padding du body et html pour full screen */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      font-family: Arial, sans-serif;
-      margin: 20px;
+      justify-content: center; /* centre horizontalement */
+      align-items: center;     /* centre verticalement */
+      background-color: #f0f0f0; /* couleur de fond */
     }
+
+    /* Image qui prend tout l'écran sans déformer le ratio */
     img {
-      max-width: 800px; /* taille max de l'image */
-      width: 100%;      /* adaptatif à l'écran */
-      height: auto;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* garde les proportions */
+      box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-
-  <h1>Mon CV</h1>
 
   <img src="CVKane.jpg" alt="CV de Kane">
 
