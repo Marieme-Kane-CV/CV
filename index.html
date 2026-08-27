@@ -4,21 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>CV - Marieme Kane</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #f0f0f0;
+      background: #eeeeee;
     }
 
-    iframe {
+    .cv-container {
       width: 100%;
-      height: 100vh;
-      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .cv-page {
+      width: 95%;
+      max-width: 1000px;
+      height: auto;
+      display: block;
+      background: white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.20);
+    }
+
+    @media (max-width: 600px) {
+      .cv-container {
+        padding: 0;
+        gap: 8px;
+      }
+
+      .cv-page {
+        width: 100%;
+      }
     }
   </style>
 
@@ -26,10 +52,29 @@
 
 <body>
 
-  <iframe 
-    src="CV%20generale.pdf"
-    title="CV de Marieme Kane">
-  </iframe>
+  <div class="cv-container">
+
+```
+<img
+  src="CV%20generale_page-0001.jpg"
+  alt="CV Marieme Kane - Page 1"
+  class="cv-page"
+>
+
+<img
+  src="CV%20generale_page-0002.jpg"
+  alt="CV Marieme Kane - Page 2"
+  class="cv-page"
+>
+
+<img
+  src="CV%20generale_page-0003.jpg"
+  alt="CV Marieme Kane - Page 3"
+  class="cv-page"
+>
+```
+
+  </div>
 
 </body>
 </html>
